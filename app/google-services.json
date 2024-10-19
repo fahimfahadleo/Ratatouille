@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1041284880884",
+    "firebase_url": "https://ratatouille-f60fb-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ratatouille-f60fb",
+    "storage_bucket": "ratatouille-f60fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041284880884:android:b7139917743f3ac23901a1",
+        "android_client_info": {
+          "package_name": "com.horoftech.ratatouille"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041284880884-3gjovcldftvcum3fr9jpp1k674nlmdf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.horoftech.ratatouille",
+            "certificate_hash": "1c50800a48792c6f668b7760747bae129bfa5979"
+          }
+        },
+        {
+          "client_id": "1041284880884-8qmohgf164dadp4gp9q7gp1e6bsskgka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnihPNB7JwKuR9R-GXvGDxQsv_WkHmKnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041284880884-8qmohgf164dadp4gp9q7gp1e6bsskgka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

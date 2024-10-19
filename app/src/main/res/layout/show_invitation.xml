@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#B33B3B"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:text="Invitation"
+        android:id="@+id/titie"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:id="@+id/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titie"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Name"
+        android:backgroundTint="#60ffffff"
+        android:background="@drawable/simple_item_border"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:gravity="center"
+        android:id="@+id/name"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:background="@drawable/simple_item_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:backgroundTint="#60ffffff"
+        android:id="@+id/emaillayout"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="Win"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        android:gravity="center"
+        android:background="@drawable/simple_item_border"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="#60ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emaillayout"
+        app:layout_constraintEnd_toStartOf="@id/lose"
+        android:id="@+id/wins"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="Lose"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        android:gravity="center"
+        android:background="@drawable/simple_item_border"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="#60ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wins"
+        app:layout_constraintTop_toBottomOf="@id/emaillayout"
+        android:id="@+id/lose"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="Player Id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:background="@drawable/simple_item_border"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="#60ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wins"
+        android:id="@+id/id"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="Decline"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        android:gravity="center"
+        android:background="@drawable/simple_item_border"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="#60FF2020"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id"
+        app:layout_constraintEnd_toStartOf="@id/accept"
+        android:id="@+id/decline"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="Accept"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#fff"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/simple_item_border"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:backgroundTint="#6000FF22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/decline"
+        app:layout_constraintTop_toBottomOf="@id/id"
+        android:id="@+id/accept"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

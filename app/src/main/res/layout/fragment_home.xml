@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.horoftech.ratatouille.viewModels.HomeFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HomeFragment">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/reset"
+            android:onClick="@{ViewModel::onAction}"
+            app:layout_constraintEnd_toEndOf="@id/mainGameLayout"
+            app:layout_constraintTop_toBottomOf="@id/mainGameLayout"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/addLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <EditText
+                android:layout_width="@dimen/_145sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:hint="Invite"
+                android:id="@+id/edittext"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toStartOf="@id/add"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:padding="@dimen/_4sdp"
+                android:onClick="@{ViewModel::onAction}"
+                android:src="@drawable/add" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Win"
+            android:onClick="@{ViewModel::onAction}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addLayout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:id="@+id/winrate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Win"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@id/profilePicture1"
+            app:layout_constraintStart_toStartOf="@id/profilePicture1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture1"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@id/mainGameLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/player1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="Player 1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@id/mainGameLayout"
+            app:layout_constraintStart_toEndOf="@id/profilePicture1" />
+
+        <TextView
+            android:id="@+id/winrate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="win"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@id/profilePicture2"
+            app:layout_constraintEnd_toEndOf="@id/profilePicture2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture2"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@id/mainGameLayout"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/player2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="Player 2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@id/mainGameLayout"
+            app:layout_constraintEnd_toStartOf="@id/profilePicture2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainGameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="1"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="2"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="3"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/win1"
+                    android:layout_width="0dp"
+                    android:layout_height="3dp"
+                    android:background="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/one">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="4"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="5"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="6"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/win2"
+                    android:layout_width="0dp"
+                    android:layout_height="3dp"
+                    android:background="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/two">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="7"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="8"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="1dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:onClick="@{ViewModel::onClick}"
+                        android:tag="9"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_45sdp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/win3"
+                    android:layout_width="0dp"
+                    android:layout_height="3dp"
+                    android:background="@color/red"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/win4"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/win5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/win5"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:background="@color/red"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/win6"
+                app:layout_constraintStart_toEndOf="@id/win4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/win6"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/win5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/win8"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@color/red"
+            android:rotation="135"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/mainGameLayout"
+            app:layout_constraintEnd_toEndOf="@id/mainGameLayout"
+            app:layout_constraintStart_toStartOf="@id/mainGameLayout"
+            app:layout_constraintTop_toTopOf="@id/mainGameLayout" />
+
+        <View
+            android:id="@+id/win7"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:background="@color/red"
+            android:rotation="45"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/mainGameLayout"
+            app:layout_constraintEnd_toEndOf="@id/mainGameLayout"
+            app:layout_constraintStart_toStartOf="@id/mainGameLayout"
+            app:layout_constraintTop_toTopOf="@id/mainGameLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

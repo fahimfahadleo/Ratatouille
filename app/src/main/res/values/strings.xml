@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ratatouille</string>
+    <string name="google">google</string>
+    <string name="ratatouille">Ratatouille</string>
+    <string name="googleapikey">126910785564-35894930d2ar6gb16s619lstv365kg3p.apps.googleusercontent.com</string>
+    <string name="save">Save</string>
+    <string name="referral">Referral...</string>
+    <string name="referraltitle">Referral</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

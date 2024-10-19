@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.horoftech.ratatouille.viewModels.ActivityHomeViewModel" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B33B3B"
+        tools:context=".ui.HomeActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?android:attr/actionBarSize"
+            android:id="@+id/fragmentcontainer"
+            app:layout_anchor="@id/bottomappbar"
+            app:layout_anchorGravity="top"/>
+
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomappbar"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="4dp"
+            app:fabCradleRoundedCornerRadius="@dimen/_10sdp">
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:background="#00ffffff"
+                android:alpha="0.8"
+                android:id="@+id/bottomNavigationView"
+                app:menu="@menu/tab_menu"
+                app:labelVisibilityMode="labeled"
+                />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <!--    <Button-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"-->
+        <!--        android:layout_marginTop="@dimen/_8sdp"-->
+        <!--        android:text="sign out"-->
+        <!--        android:id="@+id/siginoutButton"/>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
